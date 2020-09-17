@@ -527,7 +527,51 @@ a:hover{
     display: block;
     text-align: center;
 }
+/* responsive css */
+span.open_btn {
+    font-size: 22px;
+    padding:2px 9px;
+    transition: .4s;
+}
+span.open_btn:hover {
+    background-color:#1F1F1F;
+    color: #fff;
+}
+.side_menu {
+    background: #1F1F1F;
+    height: 100%;
+    width: 0px;
+    transition: .7s;
+    position: fixed;
+    z-index: 999;
+    overflow-x: hidden;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.side_menu img {
+    display: block;
+    margin: 17px auto 20px auto;
+}
+.side_menu ul{
+    display: block;
+    padding: 0%;
+    list-style: none;
+    text-align: left;
+}
 
+.side_menu ul li a{
+    display: block;
+    padding: 9px 30px;
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+    transition: .4s;
+}
+.side_menu ul li a:hover{
+    color: black;
+    background-color: white;
+}
 /* responsive media */
 @media all and (max-width:1330px){
     .input_below_item {

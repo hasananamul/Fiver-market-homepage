@@ -78,7 +78,6 @@ a:hover{
 /* slider section */
 .slider_section{
     position: relative;
-    z-index: -1;
 }
 .slider_items{
     position: relative;
@@ -136,6 +135,9 @@ a:hover{
 .input_below_text p {
     font-size: 11px;
 }
+.carousel-control-next, .carousel-control-prev{
+    position: unset;
+}
 .left_control{
     position: absolute;
     left: 10px;
@@ -146,18 +148,19 @@ a:hover{
     transform: translateY(45%);
 }
 .left_control i,.right_control i{
+    color: red;
+} 
+.left_control a, .right_control a {
     display: inline-block;
     width: 40px;
     line-height: 40px;
     text-align: center;
     height: 40px;
+    cursor: pointer;
     border-radius: 50%;
     transition: .4s;
 }
-.left_control a,.right_control a{
-    color: red;
-}
-.left_control i:hover,.right_control i:hover{
+.left_control a:hover,.right_control a:hover{
     background-color: #dacdcd;
 }
 .right_control {
@@ -189,11 +192,13 @@ a:hover{
 }
 
 /* trending section */
-#trending_collection{}
+#trending_collection {
+    position: relative;
+    top: -72px;
+}
 .trending_content {
     background: #f7f7f7;
     padding: 50px;
-    margin-top: -73px;
     border-radius: 12px 12px 0px 0px;
 }
 .section_title {
@@ -463,7 +468,6 @@ a:hover{
     background: #fff;
     padding: 30px 0px;
 }
-.footer_menu{}
 .footer_menu ul{
     display: flex;
     list-style: none;
@@ -494,11 +498,6 @@ a:hover{
     color: #C4B3B3;
     margin-right: 30px;
 }
-.footer_select_lang_logo .logo{
-
-}
-.footer_select_lang_logo .logo img{}
-.footer_social_icon{}
 .footer_social_icon ul{
     display: flex;
     list-style: none;
@@ -535,8 +534,8 @@ a:hover{
         position: relative;
        margin-left: -190px;
     }
-    .trending_content {
-        margin-top: -30px;
+    #trending_collection  {
+        top: -30px;
     }
     .footer_social_icon ul li a i {
         width: 25px;
@@ -570,8 +569,8 @@ a:hover{
     .slide_text h3 {
         font-size: 32px;
     }
-    .trending_content {
-        margin-top: 0;
+    #trending_collection  {
+        top: 0;
     }
     .input_below_item {
         position: relative;

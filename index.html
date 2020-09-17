@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="style.css">
 
   </head>
-  <body>
+  <body id="responsive_body">
     <header id="fiver_header">
       <div class="header_top_row">
         <div class="container">
@@ -42,8 +42,28 @@
         </div><!--container-->
       </div><!--header top row-->
       <div class="heder_bottom_row">
+
         <div class="header_bottom">
-          <ul>
+          <div class="responsive_item">
+            <div class="d-md-none">
+              <span class="open_btn"onclick="openButton()"><i class="fas fa-bars"></i></span>
+            </div><!--open btn-->
+            <div id="side_menu" class="side_menu d-md-none">
+              <img src="img/fiverr-logo-png_1546610.png" alt="">
+              <ul>
+                <li><a href="#">Graphics & Design</a></li>
+                <li><a href="#">Online Marketing</a></li>
+                <li><a href="#">Writing & Translation</a></li>
+                <li><a href="#">Video & Animation</a></li>
+                <li><a href="#">Music & Audio</a></li>
+                <li><a href="#">Programming & Tech</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">More</a></li>
+              </ul>
+            </div><!--side menu-->
+          </div><!--responsive item-->
+          <ul class="d-none d-md-flex">
 						<li><a href="#">Graphics & Design</a></li>
 						<li><a href="#">Online Marketing</a></li>
 						<li><a href="#">Writing & Translation</a></li>
@@ -58,12 +78,12 @@
       </div><!--header bottom row-->
     </header><!--fiver header-->
     <section id="my_slide"class="slider_section carousel slide"data-ride="carousel">
-      <div class="slidde_controler">
+      <div class="slidde_controler ">
         <div class="left_control">
-          <a href="#my_slide"data-slide="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+           <a class="carousel-control-prev" href="#my_slide" role="button" data-slide="prev"><i class="fa fa-angle-left "></i></a>
         </div><!--left control-->
         <div class="right_control">
-          <a href="#my_slide"data-slide="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+           <a  class="carousel-control-next" href="#my_slide" role="button" data-slide="next"><i class="fa fa-angle-right " ></i></a> 
         </div><!--right control-->
       </div><!--slide controler-->
       <div class="slider_items carousel-inner">
@@ -169,10 +189,6 @@
         </ul>
       </div><!--slider bullet-->
     </section><!--#slider section-->
-
-   
-
-
 <!-- 
   trending section start
  -->
@@ -241,7 +257,6 @@
 
 <!-- FEATURED GIGS section start -->
  
-    <!-- Optional JavaScript -->
 <section id="feature_gig_section">
   <div class="container">
     <div class="feature_gigs_content">
@@ -487,7 +502,7 @@
   <!-- news and stories section -->
   <section id="news_stories_section">
     <div class="container">
-      <div class="section_title">
+      <div class="section_title pt-5">
         <h2>TRENDING COLLECTIONS</h2>
         <p>Choose from our most popular services</p>
       </div><!--section title-->
@@ -611,12 +626,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
-
+      $('document').ready(function(){
      $('.carousel').carousel({
         interval : 2000,
-        pause:'hover',
-       });
-    
-  </script>
+         pause:'hover',
+        });
+    });
+    function openButton(){
+      let x=document.getElementById('side_menu');
+      let y= document.getElementById('responsive_body');
+      if (x.style.width==='0px'){
+        x.style.width='250px';
+        x.style.opacity="1";
+        y.style.marginLeft="250px";
+      }
+      else {
+        x.style.width='0';
+        y.style.marginLeft='0px';
+        y.style.transition='.7s';
+      }
+    }
+    </script>
   </body>
 </html>

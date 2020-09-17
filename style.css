@@ -537,7 +537,7 @@ span.open_btn:hover {
     background-color:#1F1F1F;
     color: #fff;
 }
-.side_menu {
+#side_menu {
     background: #1F1F1F;
     height: 100%;
     width: 0px;
@@ -549,18 +549,18 @@ span.open_btn:hover {
     top: 0;
     opacity: 0;
 }
-.side_menu img {
+#side_menu img {
     display: block;
     margin: 17px auto 20px auto;
 }
-.side_menu ul{
+#side_menu ul{
     display: block;
     padding: 0%;
     list-style: none;
     text-align: left;
 }
 
-.side_menu ul li a{
+#side_menu ul li a{
     display: block;
     padding: 9px 30px;
     color: white;
@@ -568,7 +568,7 @@ span.open_btn:hover {
     text-transform: capitalize;
     transition: .4s;
 }
-.side_menu ul li a:hover{
+#side_menu ul li a:hover{
     color: black;
     background-color: white;
 }
